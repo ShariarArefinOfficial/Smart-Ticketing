@@ -34,3 +34,8 @@ color: rgb(29, 209, 0);
     color: rgb(29, 209, 0);
     border-radius: 12px;
 }
+.btn-seat{
+    color: rgb(29, 209, 0);
+    border-radius: 12px;
+background: rgba(29, 209, 0, 0.15);
+}
