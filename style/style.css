@@ -1,0 +1,28 @@
+/*
+Project Name:Smart TIcketing
+Developer Name:Shariar Arefin
+Project Version:1.0.0
+
+*/
+
+/* Font Import From google Font**/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CUstom Font Class Creation*/
+
+.font-raleway{
+    font-family: "Raleway", sans-serif;
+}
+.font-inter{
+    font-family: "Inter", sans-serif;
+}
+/*Button Text*/
+.btn-custom{
+    box-sizing: border-box;
+border: 1px solid rgba(29, 209, 0, 0.4);
+border-radius: 12px;
+background: rgba(29, 209, 0, 0.1);
+color: rgb(29, 209, 0);
+}
