@@ -58,19 +58,12 @@ for(let i=0;i<button.length;i++){
                 showGrandById('grandTotal',priceTotal);
                 // setDisable('apply');
                 // setDisable('coupon-div'); 
-
-
                }
                else if(priceTotal===2200){
                 showGrandById('grandTotal',priceTotal);               
-                removeDisable('apply');
-                
-
+                removeDisable('apply'); 
                }
-
-
-
-               }
+              }
                
                
             }
@@ -81,6 +74,25 @@ for(let i=0;i<button.length;i++){
              return alert("No more TIcket");
         
             }
+
+
+        //Next Button Part
+            const phoneNumberGetId=document.getElementById('phoneNumber');
+            const nextButtonGetId=document.getElementById('next');
+            console.log(phoneNumberGetId);
+            console.log(nextButtonGetId);
+            
+            
+
+            phoneNumberGetId.addEventListener('input',function(){
+                if(phoneNumberGetId.value !== ""){
+                    removeDisable('next');
+                    nextButtonGetId.addEventListener('click',function(){
+                        console.log("button clicked");
+                    }) 
+    
+                }
+            })
             
 
        
