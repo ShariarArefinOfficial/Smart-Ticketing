@@ -6,6 +6,7 @@ let priceTotal=0;
 let count=0;
 const seatAvailable=document.getElementById('seat-decrease');
 let seatDecrease=parseInt(seatAvailable.innerText);
+let customID;
 
 console.log(seatDecrease);
 for(let i=0;i<button.length;i++){
@@ -14,12 +15,14 @@ for(let i=0;i<button.length;i++){
     element.addEventListener('click',function(){
         //console.log('clicked');
         const click =element.querySelector("span");
-        const value=click.innerText;
+        
         //console.log(value);
         let priceShow=550;
 
         //One Click After This button will be disable
         const buttonId=click.parentNode.id;
+        customID=buttonId;
+        console.log(customID);
 
        //seat count
        count=count+1;
@@ -31,8 +34,9 @@ for(let i=0;i<button.length;i++){
 
        if(count<=4){
                //color change
-               changeColorById(buttonId);               
+               changeColorById(customID);               
                //Seat field
+               const value=click.innerText;
               appendElementByID('seat-num',value);
                //Class Name
                const className='Economoy';
@@ -47,6 +51,28 @@ for(let i=0;i<button.length;i++){
                 //seat availablity      
                seatDecrease=seatDecrease-1;
                showDecreaseById('seat-decrease',seatDecrease);
+
+               if(priceTotal<=2200){
+                //Grand Total 
+               if(priceTotal<2200){
+                showGrandById('grandTotal',priceTotal);
+                // setDisable('apply');
+                // setDisable('coupon-div'); 
+
+
+               }
+               else if(priceTotal===2200){
+                showGrandById('grandTotal',priceTotal);               
+                removeDisable('apply');
+                
+
+               }
+
+
+
+               }
+               
+               
             }
              else if(count>4){
        
@@ -55,6 +81,7 @@ for(let i=0;i<button.length;i++){
              return alert("No more TIcket");
         
             }
+            
 
        
 

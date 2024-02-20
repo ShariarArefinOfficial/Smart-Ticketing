@@ -450,13 +450,13 @@
               </div>
             </div>
             <!--COupon-->
-            <div class="flex flex-row justify-center px-2 bg-white w-full mx-auto items-center py-4 rounded-xl">
+            <div id="coupon-div" class="flex flex-row justify-center px-2 bg-white w-full mx-auto items-center py-4 rounded-xl">
               <div>
-                <input type="text" placeholder="Have any copupon?" id="coupon" class="px-8 py-4 border-0">
+                <input id="coupon" type="text" placeholder="Have any copupon?" id="coupon" class="px-8 py-4 border-0">
 
               </div>
               <div>
-                <button class="bg-[#1DD100] text-white font-inter font-semibold text-base px-8 py-4 rounded-lg">Apply</button>
+                <button id="apply" disabled onclick="couponApply()" class="bg-[#1DD100] text-white font-inter font-semibold text-base px-8 py-4 rounded-lg">Apply</button>
               </div>
             </div>
             <!--Grand TOtal-->
@@ -466,7 +466,7 @@
 
               </div>
               <div>
-                <p class="text-lg font-semibold text-[#030712]">BDT 1100</p>
+                <p  id="grandTotal" class="text-lg font-semibold text-[#030712]">BDT 0</p>
               </div>
             </div>
             <div>
@@ -500,7 +500,7 @@
             </label>
           </div>  
           <button class="bg-[#1DD100] text-white font-inter w-full text-center mt-8 font-semibold text-base px-8 py-4 rounded-lg">Next</button>
-          <div class="flex flex-row justify-around items-center py-6 ">
+          <div class="flex flex-row justify-around items-center py-6 gap-5 ">
             <div>
               <p class="text-lg font-inter  text-[#03071299]">Terms and Conditions</p>
 
