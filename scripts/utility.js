@@ -72,7 +72,11 @@ function couponApply(){
         let grandTotal=totalCost*discount;
         totalCost=totalCost-grandTotal;
         showGrandById('grandTotal',totalCost);
-        hiddenDIv('coupon-div');               
+        hiddenDIv('coupon-div'); 
+        let discountSection =document.getElementById('displayDiscount');
+        discountSection.classList.remove('hidden');
+        let discountValue=document.getElementById('discountVal');
+        discountValue.innerText= grandTotal;             
 
         //return discount;
 
@@ -85,6 +89,10 @@ function couponApply(){
        totalCost=totalCost-grandTotal;
        showGrandById('grandTotal',totalCost);
        hiddenDIv('coupon-div');
+       let discountSection =document.getElementById('displayDiscount');
+        discountSection.classList.remove('hidden');
+        let discountValue=document.getElementById('discountVal');
+        discountValue.innerText= grandTotal;  
     }
     else{
         let discount = 0;
@@ -92,7 +100,7 @@ function couponApply(){
         let grandTotal=totalCost*discount;
         totalCost=totalCost-grandTotal;
         showGrandById('grandTotal',totalCost);
-        setDisable('apply');
+        //setDisable('apply');
         alert("Enter a Valid Coupon");
         //return 0;
     }
