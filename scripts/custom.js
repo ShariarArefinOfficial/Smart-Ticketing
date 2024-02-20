@@ -20,44 +20,41 @@ for(let i=0;i<button.length;i++){
 
         //One Click After This button will be disable
         const buttonId=click.parentNode.id;
-        
-
-        //color change
-        changeColorById(buttonId);               
-        //Seat field
-       appendElementByID('seat-num',value);
-        //Class Name
-        const className='Economoy';
-        appendElementByID('class-name',className);
-        //price field
-        appendElementByID('price',priceShow);
-
-
-
-        //total price
-        priceTotal=priceShow+priceTotal;
-        showTotalById('priceVal',priceTotal)
 
        //seat count
        count=count+1;
-       showTotalById('seat-count',count)
 
-       //seat availablity      
-       seatDecrease=seatDecrease-1;
-       showDecreaseById('seat-decrease',seatDecrease);
+       
 
        const disable=document.getElementById(buttonId);
        disable.setAttribute('disabled',true);
 
        if(count<=4){
+               //color change
+               changeColorById(buttonId);               
+               //Seat field
+              appendElementByID('seat-num',value);
+               //Class Name
+               const className='Economoy';
+               appendElementByID('class-name',className);
+               //price field
+               appendElementByID('price',priceShow);       
+               //total price
+               priceTotal=priceShow+priceTotal;
+               showTotalById('priceVal',priceTotal);
+                //seat count
+                showTotalById('seat-count',count);
+                //seat availablity      
+               seatDecrease=seatDecrease-1;
+               showDecreaseById('seat-decrease',seatDecrease);
+            }
+             else if(count>4){
+       
+            disable.setAttribute('disabled',true);
 
-       }
-       else if(count>4){
-        const allDisable=document.getElementsByClassName("button");
-        //console.log(allDisable);
-        allDisable.setAttribute('disabled',true);
-        alert("No more TIcket");
-       }
+             return alert("No more TIcket");
+        
+            }
 
        
 
