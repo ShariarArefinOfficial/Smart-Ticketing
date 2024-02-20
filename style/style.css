@@ -39,3 +39,8 @@ color: rgb(29, 209, 0);
     border-radius: 12px;
 background: rgba(29, 209, 0, 0.15);
 }
+.seat-selection-button{
+    background: #1DD100;
+    color:white;
+    font-weight: 700;
+}
